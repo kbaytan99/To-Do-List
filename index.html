@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TO-DO APP</title>
+    <meta name="keywords" content="HTML, CSS, JavaScript, Boostrap, DOM, TO-DO LIST">
+    <meta name="description" content="To-do list where you can do all things">
+    <meta name="author" content="Kaan Baytan">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="js/index.js"></script>
+</head>
+<body style="background-color: white;">
+    <div class="container">
+        <h3 class=>To Do App</h3>
+            <div class="container border" style="border-color: rgb(230, 230, 230); background-color: rgb(247, 247, 247);">
+                <h5 class="font-weight-dark text-left text-muted p-2">New Task</h5>
+            </div>
+            <div class="container border" style="background-color: rgb(255, 255, 255);">
+                <div class="row my-4">
+                    <input class="form-control form-control-sm col-10 my-2 mx-4" type="Text" id="newTaskId" name="newTaskName" placeholder="Type a new Task" oninput="changeColorYourType()">
+                    <button class="btn btn-outline-primary btn-sm col-1 my-2" type="button" onclick="addItemToYourList()" id="buttonAddList">+</button>
+                </div>
+            </div>
+            <div class="container border mt-4" style="border-color: rgb(230, 230, 230); background-color: rgb(247, 247, 247);">
+                <div class="row my-1">
+                    <h5 class="font-weight-dark text-left text-muted p-2 mx-3 col-8">TO-DO LIST</h5>
+                    <button class="btn btn-outline-success btn-sm col-1 my-2 mx-3 text-sm-center" onclick="loadStorageFromLocal()" id="buttonDeleteAll">Load All</button>
+                    <button class="btn btn-outline-danger btn-sm col-1 my-2 mx-3 text-sm-center" onclick="deleteLocalStorageOnClick()" id="buttonDeleteAll">Delete All</button>
+                </div>
+            </div>
+            <div class="container" style="background-color: rgb(255, 255, 255);">
+                <div class="row">
+                    <table class="table table-striped">
+                        <tbody id="listTBody">
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
